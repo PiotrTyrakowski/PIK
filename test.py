@@ -23,14 +23,15 @@ ssid = loginResponse['streamSessionId']
 
 now = int(time.time() * 1000)
 year_ago = now - 365 * 24 * 60 * 60 * 1000 # 365 days ago
-twenty = now - 20 * 24 * 60 * 60 * 1000 # 20 days ago
+thirty = now - 30 * 24 * 60 * 60 * 1000 # 20 days ago
+one_day = now - 24 * 60 * 60 * 1000 # 1 day in minutes
 
 history = {
     "command": "getChartLastRequest",
     "arguments": {
         "info": {
-            "period": 240, # 6 hours in minutes
-            "start": twenty,
+            "period": 1, # 6 hours in minutes
+            "start": thirty,
             "symbol": "ETHEREUM"
         }
     }
